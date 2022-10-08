@@ -1,0 +1,9 @@
+.search-icon {
+   
+    width: 32px;
+    height: auto;
+}
+.search {
+    display: flex;
+    align-items: center;
+}

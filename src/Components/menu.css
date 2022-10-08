@@ -1,0 +1,19 @@
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.item {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.2s ease-out;
+
+}
+.item:hover {
+    border-bottom: 4px solid #ffbf00;
+
+}
