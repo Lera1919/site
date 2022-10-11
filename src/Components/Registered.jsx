@@ -8,7 +8,7 @@ function Registered() {
   return (
 
     <div>
-      Registration
+      Registered
     </div>
   );
 }

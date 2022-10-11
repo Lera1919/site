@@ -4,16 +4,25 @@
     gap: 20px;
     align-items: center;
 }
-.item {
+
+
+   
+
+.nav-link {
+    text-decoration: none;
+    color: black;
     font-size: 16px;
-    font-weight: bold;
+    
     cursor: pointer;
     padding: 10px 15px;
     border-bottom: 4px solid transparent;
     transition: all 0.2s ease-out;
 
 }
-.item:hover {
+.nav-link:hover {
     border-bottom: 4px solid #ffbf00;
-
+}
+.selected {
+    color: rgb(240, 22, 22);
+    font-weight: bold;
 }
