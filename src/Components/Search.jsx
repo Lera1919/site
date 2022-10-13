@@ -1,6 +1,6 @@
 import './search.css';
-import search from '../image/search.webp' 
-
+// import search from '../image/search.webp' 
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
 
 function Search() {
@@ -11,7 +11,9 @@ function Search() {
 
     <div className='search'>
         <input className='search-input' type='text'/>
-      <img className='search-icon' src={search} alt='search'/>
+      {/* <img className='search-icon' src={search} alt='search'/> */}
+      <MagnifyingGlassIcon className="h-6 w-6" />
+      
     </div>
   );
 }

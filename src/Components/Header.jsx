@@ -11,7 +11,8 @@ function Header() {
   return (
     <header className='header'>
       <div className='block'>
-        <img className='logo' src={logo} alt='Logotype'/>
+        <a href='/home'><img className='logo' src={logo} alt='Logotype'/>
+        </a>
         <Menu />
       </div>
       <div className='block'>
