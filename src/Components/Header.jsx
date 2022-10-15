@@ -28,11 +28,11 @@ export default function Header() {
       </NavLink>
         <Menu />
       </div>
-      <div className='hidden lg:flex flex item-center gap-6'>
+      <div className='hidden mb:flex flex item-center gap-6'>
         <Search />
         <Registered />
       </div>
-      <button onClick={handlerClick}  className='flex lg:hidden px-4 py-4 bg-slate-300 rounded-md hover:bg-slate 600 hover:text-white transition duration-200 ease-out'>
+      <button onClick={handlerClick}  className='flex  mb:hidden px-4 py-4 bg-slate-300 rounded-md hover:bg-slate 600 hover:text-white transition duration-200 ease-out'>
         <Bars2Icon className='w-6'/>
       </button>
         
