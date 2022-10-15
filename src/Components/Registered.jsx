@@ -1,4 +1,4 @@
-import './registered.css';
+
 
 
 function Registered() {
@@ -7,7 +7,7 @@ function Registered() {
 
   return (
 
-    <div>
+    <div className="flex">
       Registered
     </div>
   );
