@@ -1,42 +1,42 @@
 
 function Poster(props) {
 
-    const {movies, index}= props;
+    const {movies, index, isLoaded} = props;
 
     // console.log(movie);
+if (!isLoaded){ 
+    return <div className={'w-full h-[calc(100vh-200px)] bg-slate-300 flex items-center justify-center'}>Loading...</div>
+}else {
+     return (
+        <div className={'text-white w-full h-[calc(100vh-200px)] bg-no-repeat' + 
+        'bg-center bg-cover relative grid items-center'} 
+        style={{backgroundImage: 'url(https://image.tmdb.org/t/p/original' + movies[index].backdrop_path + ')'}}>
+            <div className='absolute top-0 right-0 bottom-0 left-0 bg-slate-900 opacity-70'></div>
 
-    const divStyle = {
-        color: '#fff',
-        backgroundImage: 'url(https://image.tmdb.org/t/p/original' + movies[index].backdrop_path + ')',
-      };
-
-  return (
-    <div className="Poster" style={divStyle}>
-        <div className='Poster-dark'>
-            <div className='Container'>
-                <div className='Poster-content'>
-                    <span className='Poster-title'>{movies[index].original_title}</span>
-                    <p className='Poster-description'>{movies[index].overview}</p>
-                    <div className='Poster-data'><span className='Poster-data-title'>Release date:</span> <span className='Poster-data-accent'>{movies[index].release_date}</span></div>
-                    <div className='Poster-data'><span className='Poster-data-title'>Rating:</span> <span className='Poster-data-accent'>{movies[index].vote_average}</span></div>
-                    <div className='Poster-data'><span className='Poster-data-title'>Vote count:</span> <span className='Poster-data-accent'>{movies[index].vote_count}</span></div>
-                    
-                    <div className='Poster-carusel'>
+            <div className='max-w-screen-2xl mx-auto p-4 relative z-10'>
+                <div className=''>
+                    <span className='text-2xl mb:text-7xl mb-28 block'>{movies[index].original_title}</span>
+                    <p className='text-md mb:text-2xl -scroll-mb-16'>{movies[index].overview}</p>
+                    <div className=''><span className=''>Release date:</span> <span className=''>{movies[index].release_date}</span></div>
+                    <div className=''><span className=''>Rating:</span> <span className=''>{movies[index].vote_average}</span></div>
+                    <div className=''><span className=''>Vote count:</span> <span className=''>{movies[index].vote_count}</span></div>
+                </div>   
+                     
+            </div>
+            <div className='absolute bottom-0 flex items-center'>
                         {movies.map((movie, key) => (
                             <a href='#'>
-                               <div className='Poster-element'>
-                                    <img className='Poster-img' src={'https://image.tmdb.org/t/p/w220_and_h330_face'+ movie.poster_path} alt=''/>
-                                    <div className='Poster-average'>{movie.vote_average}</div>
-                                </div>
+                               <div className=''>
+                                    <img className='' src={'https://image.tmdb.org/t/p/w220_and_h330_face'+ movie.poster_path} alt=''/>
+                                    {/* <div className=''>{movie.vote_average}</div> */}
+                               </div>
                             </a>
                         ))}
-                    </div>
+                    
+             </div>
 
-                </div>
-            </div>
         </div>
-    </div>
   );
 }
-
+}
 export default Poster;

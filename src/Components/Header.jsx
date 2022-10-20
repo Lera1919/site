@@ -28,7 +28,7 @@ export default function Header() {
       </NavLink>
         <Menu />
       </div>
-      <div className='hidden mb:flex flex item-center gap-6'>
+      <div className='hidden mb:flex flex items-center gap-6'>
         <Search />
         <Registered />
       </div>
